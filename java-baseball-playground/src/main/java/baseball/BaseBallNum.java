@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+
+/**
+ * 현재 코드의 문제점은 하나에 모든 것을 구현하면서 코드 복잡도가 증가하였다.
+ * 이 부분을 어떻게 하면 더 쪼갤 수 있을지 고민을 해야한다.
+ * 전체 숫자를 다 비교하는 것보다는 주어진 하나를 가지고 스트라이크, 볼, 낫싱을 판단한다.
+ */
 public class BaseBallNum {
   private final static int MAX_NUM = 3; // 최대 3개의 숫자를 뽑는다.
   private List<Integer> list;
