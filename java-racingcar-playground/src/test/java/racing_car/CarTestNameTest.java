@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import racing_car.CarName;
 
-public class CarNameTest {
+public class CarTestNameTest {
 
   @Test
   @DisplayName("차량 이름 붙이기")

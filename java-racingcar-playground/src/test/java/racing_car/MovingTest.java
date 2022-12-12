@@ -30,4 +30,5 @@ public class MovingTest {
     int movingForwardCnt = moving.getMovingForwardcnt();
     assertThat(movingForwardCnt).isEqualTo(0);
   }
+
 }
