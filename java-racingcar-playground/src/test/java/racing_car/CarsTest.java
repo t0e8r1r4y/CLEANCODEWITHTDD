@@ -44,6 +44,7 @@ public class CarsTest {
     assertThat(car.getCarList().get(2).getMoving().getMovingForwardcnt()).isEqualTo(1);
   }
 
+  // TODO - 한턴씩 반복하면서 종료되는 조건을 찾지말고, 처음부터 종료가 되는 게임을 만들고 보여주는 것만 한 단계씩 변화하는 것으로 보여주는 로직 구현
   @Test
   @DisplayName("경주용 차량 기준 도달 여부 체크")
   void 완주체크(){
