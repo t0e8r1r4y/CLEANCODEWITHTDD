@@ -15,12 +15,12 @@ public class Game {
   public Game(InputDto dto){
     this.cars = new Cars(dto.getNameList());
     this.endCount = dto.getEndCount();
-    this.randUtil = new RandUtil(this.endCount);
+    this.randUtil = new RandUtil(dto.getNameList().size());
   }
   public Game(List<String> nameList, int endCount) {
     this.cars = new Cars(nameList);
     this.endCount = endCount;
-    this.randUtil = new RandUtil(this.endCount);
+    this.randUtil = new RandUtil(nameList.size());
   }
 
   public int getNumberOfCar() {
