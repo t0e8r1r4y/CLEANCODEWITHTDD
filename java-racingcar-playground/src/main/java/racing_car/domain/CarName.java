@@ -12,7 +12,7 @@ public class CarName {
   public String getName() {
     return this.name;
   }
-  public void carNameValidate(String carName) {
+  private void carNameValidate(String carName) {
     if(carName.length() > MAX_NAME_LENGTH) throw new IllegalArgumentException("이름은 5글자를 초과할 수 없습니다.");
   }
 }
