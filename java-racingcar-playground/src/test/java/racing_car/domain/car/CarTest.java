@@ -10,7 +10,7 @@ import org.junit.jupiter.api.RepetitionInfo;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.api.Nested;;
+import org.junit.jupiter.api.Nested;
 
 /**
  * Car라는 클래스는 CarName 클래스와 CarMoving 클래스가 합쳐져서 만들어진 클래스로
