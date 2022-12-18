@@ -1,4 +1,4 @@
-package racing_car.domain;
+package racing_car.view;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import racing_car.view.InputView;
 
 public class InputViewTest {
 

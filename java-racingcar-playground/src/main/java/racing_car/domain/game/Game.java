@@ -1,10 +1,11 @@
-package racing_car.domain;
+package racing_car.domain.game;
 
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import racing_car.domain.car.Cars;
+import racing_car.util.RandUtil;
+import racing_car.view.dto.InputDto;
 
 public class Game {
 

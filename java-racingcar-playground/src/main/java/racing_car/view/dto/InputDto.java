@@ -1,4 +1,4 @@
-package racing_car.domain;
+package racing_car.view.dto;
 
 import java.util.Arrays;
 import java.util.List;

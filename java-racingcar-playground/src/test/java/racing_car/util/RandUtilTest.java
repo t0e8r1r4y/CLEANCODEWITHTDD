@@ -1,4 +1,4 @@
-package racing_car.domain;
+package racing_car.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import racing_car.util.RandUtil;
 
 
 @DisplayName("랜덤 숫자 생성 테스트") @Nested

@@ -1,4 +1,4 @@
-package racing_car.domain;
+package racing_car.view.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import racing_car.view.dto.OutputDto;
 
 public class OutputDtoTest {
 
