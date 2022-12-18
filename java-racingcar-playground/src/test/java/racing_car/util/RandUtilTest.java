@@ -1,18 +1,14 @@
-package racing_car.domain;
+package racing_car.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.DisplayNameGeneration;
-import org.junit.jupiter.api.DisplayNameGenerator;
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 
-@DisplayName("랜덤 숫자 생성 테스트") @Nested
-@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
+@DisplayName("랜덤 숫자 생성 테스트")
 public class RandUtilTest {
 
   @DisplayName("필요한 갯수만큼 랜덤으로 숫자를 생성합니다.")

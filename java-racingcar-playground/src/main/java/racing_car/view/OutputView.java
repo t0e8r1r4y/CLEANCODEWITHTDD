@@ -1,4 +1,4 @@
-package racing_car.domain;
+package racing_car.view;
 
 import java.util.Map;
 

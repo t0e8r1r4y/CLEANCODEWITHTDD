@@ -1,6 +1,7 @@
-package racing_car.domain;
+package racing_car.view;
 
 import java.util.Scanner;
+import racing_car.view.dto.InputDto;
 
 public class InputView {
 
