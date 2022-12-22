@@ -1,6 +1,7 @@
 package domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import java.util.stream.Stream;
@@ -36,13 +37,21 @@ public class LineCalculatorTest {
     }
 
     @DisplayName("좌표 목록으로 두 좌표 사이의 길이 계산")
-    @ParameterizedTest(name = "좌표 목록 {0}이 주어졌을 때, {1}의 결과를 리턴함")
+    @ParameterizedTest(name = "좌표{0},{1}이 주어졌을 때, {2}의 결과를 리턴함")
     @MethodSource("twoCoordinationProvider")
-    void 두_좌표_사이의_길이_계산(Coordinations coordinationsInput, int expectLength){
+    void 두_좌표_사이의_길이_계산(Coordination inputPos1, Coordination inputPos2, int expectLength){
       // when
-      double result = lineCalculator.calLength(coordinationsInput);
+      double result = lineCalculator.calLength(inputPos1, inputPos2);
       // then
       assertThat(Math.floor(result)).isEqualTo(expectLength);
+    }
+
+    @DisplayName("좌표 목록으로 두 좌표 사이의 길이 계산 - 실패 테스트")
+    @ParameterizedTest(name = "좌표{0}, null이 주어졌을 때, 예외를 반환함")
+    @MethodSource("twoCoordinationProvider")
+    void 두_좌표_사이의_길이_계산_실패(Coordination inputPos1){
+      assertThrows(NullPointerException.class,
+          ()-> lineCalculator.calLength(inputPos1, null));
     }
 
     private static Stream<Arguments> twoCoordinationProvider(){
@@ -50,7 +59,9 @@ public class LineCalculatorTest {
       coordinations.add(new Coordination(10,10));
       coordinations.add(new Coordination(14,15));
       return Stream.of(arguments(
-          coordinations,  6
+          new Coordination(10,10),
+          new Coordination(14,15),
+          6
       ));
     }
 
