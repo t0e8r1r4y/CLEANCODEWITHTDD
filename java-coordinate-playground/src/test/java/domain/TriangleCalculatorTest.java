@@ -1,6 +1,7 @@
 package domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import java.util.stream.Stream;
@@ -39,6 +40,13 @@ public class TriangleCalculatorTest {
       double result = triangleCalculator.calcArea(pos1, pos2, pos3);
 
       assertThat(Math.floor(result)).isEqualTo(expected);
+    }
+
+    @DisplayName("삼각형 넓이 계산 실패")
+    @ParameterizedTest(name = "좌표{0},{1},null이 주어졌을 때, {3}의 결과를 리턴함")
+    @MethodSource("threeCoordinationProvider")
+    void  삼각형_면적_계산_실패(Coordination pos1, Coordination pos2, Coordination pos3, int expected){
+      assertThrows(NullPointerException.class, () -> triangleCalculator.calcArea(pos1, null, pos3));
     }
 
     private static Stream<Arguments> threeCoordinationProvider() {
